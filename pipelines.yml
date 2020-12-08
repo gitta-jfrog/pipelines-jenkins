@@ -1,11 +1,11 @@
+
+apiVersion: v1.1  
 pipelines:
   - name: demo_jenkins_integration
     steps:
-      - name: test_app
+      - name: run_jenkins_job
         type: Jenkins
         configuration:
-          jenkinsJobName: basic-api
-        integrations:
-          - name: myJenkins
-        outputResources:
-          - name: app_test_results
+          jenkinsJobName: myJob      
+          integrations:
+            - name: myJenkins 
